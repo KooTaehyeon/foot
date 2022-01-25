@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav_all {
+  background-color: rgb(212, 212, 0);
+  width: 100vw;
+  height: 80px;
+}
+.nav_title {
+  font-weight: bold;
+  font-size: 26px;
+  position: relative;
+  top: 10px;
+  padding: 20px;
+}
+@media screen and (max-width: 520px) {
+}

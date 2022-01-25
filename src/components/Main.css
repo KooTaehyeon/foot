@@ -1,0 +1,106 @@
+.all {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  position: relative;
+  width: 600px;
+  border: 1px gray solid;
+  height: 15vw;
+  display: flex;
+  margin: 10px;
+  margin-top: 100px;
+}
+.img_in_box {
+  position: relative;
+  width: 20vw;
+  display: inline-block;
+  padding: 15px;
+  height: 15vw;
+  box-sizing: border-box;
+}
+.api_info {
+  position: relative;
+  width: 15vw;
+  display: inline-block;
+}
+.img_box {
+  width: 20vw;
+}
+.api_title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 15px 0px 100px 5px;
+}
+
+.time,
+.cook_img {
+  width: 15px;
+  height: 15px;
+}
+.api_view,
+.api_time {
+  margin-top: 10px;
+  padding: 0px 10px 0px 10px;
+  display: inline;
+  font-size: 20px;
+}
+@media screen and (max-width: 520px) {
+  .all {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .box {
+    position: relative;
+    width: 500px;
+    border: none;
+    border-bottom: 1px rgb(238, 232, 232) solid;
+    height: 20vw;
+    display: flex;
+    margin: 10px;
+  }
+  .img_in_box {
+    position: relative;
+    width: 30vw;
+    display: inline-block;
+    padding: 15px;
+    height: 20vw;
+    box-sizing: border-box;
+  }
+  .api_info {
+    position: relative;
+    left: 40px;
+    width: 60vw;
+    left: 50px;
+    display: inline-block;
+  }
+  .img_box {
+    width: 20vw;
+  }
+  .api_title {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 15px 0px 100px 5px;
+  }
+
+  .time,
+  .cook_img {
+    width: 15px;
+    height: 15px;
+  }
+  .api_view,
+  .api_time {
+    position: relative;
+    margin-top: 10px;
+    padding: 0px 10px 0px 10px;
+    display: inline;
+    font-size: 20px;
+    top: -80px;
+  }
+}
