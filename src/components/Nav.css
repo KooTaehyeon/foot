@@ -3,7 +3,7 @@
   padding: 0;
 }
 .nav_all {
-  background-color: rgb(212, 212, 0);
+  background-color: #ffd400;
   width: 100vw;
   height: 80px;
 }
@@ -15,4 +15,7 @@
   padding: 20px;
 }
 @media screen and (max-width: 520px) {
+  .nav_all {
+    overflow: hidden;
+  }
 }

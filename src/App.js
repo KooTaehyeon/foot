@@ -3,6 +3,7 @@ import Nav from './components/Nav.jsx';
 import Main from './components/Main.jsx';
 import Detail from './components/Detail.jsx';
 import React from 'react';
+
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>

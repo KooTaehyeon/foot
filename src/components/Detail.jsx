@@ -27,19 +27,20 @@ const Detail = () => {
       <div className='details_info'>
         <img className='api_img' src={ids.picture} alt='사진' />
         <div className='api_name'>{ids.name}</div>
-        <div>
-          <span className='api_inline'>
+        <div className='api_contents'>{ids.description}</div>
+        <div className='api_iniine_all'>
+          <div className='api_inline'>
             <img src={imgC} alt='사진' />
-            {ids.cookingTime}분
-          </span>
-          <span className='api_inline'>
+            <span> {ids.cookingTime}분</span>
+          </div>
+          <div className='api_inline'>
             <img src={imgD} alt='사진' />
-            {ids.servings}인분
-          </span>
-          <span className='api_inline'>
+            <span> {ids.servings}인분</span>
+          </div>
+          <div className='api_inline'>
             <img src={imgE} alt='사진' />
-            {ids.kcal}kcal
-          </span>
+            <span>{ids.kcal}kcal</span>
+          </div>
         </div>
         <div className='line'>
           <span className='api_block'>재료</span>
@@ -48,7 +49,7 @@ const Detail = () => {
               ids.ingredients.map((index) => (
                 <li>
                   <img src={imgF} alt='사진' />
-                  {index}
+                  <span> {index}</span>
                 </li>
               ))}
           </ul>
@@ -60,7 +61,7 @@ const Detail = () => {
               ids.spices.map((index) => (
                 <li>
                   <img src={imgF} alt='사진' />
-                  {index}
+                  <span>{index}</span>
                 </li>
               ))}
           </ul>
@@ -72,7 +73,7 @@ const Detail = () => {
               ids.cookingSteps.map((index, i) => (
                 <li>
                   <div className='api_num'>{i}</div>
-                  {index}
+                  <span> {index}</span>
                 </li>
               ))}
           </ul>

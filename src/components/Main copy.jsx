@@ -7,8 +7,6 @@ const Main = () => {
   const [date, setDate] = useState([]);
   const [loading, setLoading] = useState(true);
   const [veiw, setView] = useState(0);
-  //카테고리 담아두는곳
-  const [categoryOne, setCategoryOne] = useState([]);
   // 디테일부분
   // const [idGet, setIdGet] = useState(null);
 
@@ -24,20 +22,32 @@ const Main = () => {
     get();
     setLoading(false);
   }, []);
-  // console.log(date);
-  //카테고리 별 이름 정렬하기
-  const categoryKor = date.filter((category) => category.category === 'korean');
-  const categoryJapan = date.filter(
-    (category) => category.category === 'japanese'
-  );
-  categoryKor.sort((a, b) => a.name.localeCompare(b.name));
-  categoryJapan.sort((a, b) => a.name.localeCompare(b.name));
-  date.sort((a, b) => a.name.localeCompare(b.name));
-  date.sort((a, b) => a.category.localeCompare(b.category));
+  console.log(date);
 
-  console.log(categoryKor);
-  console.log(categoryJapan);
-  console.log('필터', date);
+  date.forEach((element) => {
+    console.log(element.category);
+  });
+
+  //detail
+  // const jsonFilter = date.map((item) => {
+  //   <Detail
+  //     id={item.id} //아이디
+  //     name={item.name} //음식이름
+  //     cookingSteps={item.cookingSteps} //음식 레시피
+  //     time={item.cookingTime} //시간
+  //     description={item.description} //음식내용
+  //     ingredients={item.ingredients} // 재료
+  //     kcal={item.kcal} //칼로리
+  //     img={item.picture} //이미지
+  //     servings={item.servings} // 먹는양 몇인분
+  //     spices={item.spices} // 재료 얼마나 넣을지 개량
+  //     idGet={idGet}
+  //   />;
+  // });
+
+  // console.log(idGet);
+  // console.log(idBool);
+  // console.log(date);
 
   const jsonDate = date.map((item) => (
     <div className='box'>
@@ -66,14 +76,7 @@ const Main = () => {
 
   return (
     <div className='all'>
-      {loading === true ? (
-        <h1>로딩중입니다</h1>
-      ) : (
-        <>
-          <div className='categroy_title'>{date[0].category}</div>
-          {jsonDate}
-        </>
-      )}
+      {loading === true ? <h1>로딩중입니다</h1> : jsonDate}
     </div>
   );
 };
