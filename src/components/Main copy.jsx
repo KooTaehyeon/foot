@@ -7,8 +7,6 @@ const Main = () => {
   const [date, setDate] = useState([]);
   const [loading, setLoading] = useState(true);
   const [veiw, setView] = useState(0);
-  // 디테일부분
-  // const [idGet, setIdGet] = useState(null);
 
   const get = async () => {
     const json = await (
@@ -23,31 +21,6 @@ const Main = () => {
     setLoading(false);
   }, []);
   console.log(date);
-
-  date.forEach((element) => {
-    console.log(element.category);
-  });
-
-  //detail
-  // const jsonFilter = date.map((item) => {
-  //   <Detail
-  //     id={item.id} //아이디
-  //     name={item.name} //음식이름
-  //     cookingSteps={item.cookingSteps} //음식 레시피
-  //     time={item.cookingTime} //시간
-  //     description={item.description} //음식내용
-  //     ingredients={item.ingredients} // 재료
-  //     kcal={item.kcal} //칼로리
-  //     img={item.picture} //이미지
-  //     servings={item.servings} // 먹는양 몇인분
-  //     spices={item.spices} // 재료 얼마나 넣을지 개량
-  //     idGet={idGet}
-  //   />;
-  // });
-
-  // console.log(idGet);
-  // console.log(idBool);
-  // console.log(date);
 
   const jsonDate = date.map((item) => (
     <div className='box'>

@@ -7,10 +7,6 @@ const Main = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [veiw, setView] = useState(0);
-  //카테고리 담아두는곳
-  const [categoryOne, setCategoryOne] = useState([]);
-  // 디테일부분
-  // const [idGet, setIdGet] = useState(null);
 
   const get = async () => {
     const json = await (
@@ -24,7 +20,6 @@ const Main = () => {
     get();
     setLoading(false);
   }, []);
-  // console.log(data);
   //카테고리 별 이름 정렬하기
   const categoryKor = data.filter((category) => category.category === 'korean');
   const categoryJapan = data.filter(
@@ -32,15 +27,13 @@ const Main = () => {
   );
   categoryKor.sort((a, b) => a.name.localeCompare(b.name));
   categoryJapan.sort((a, b) => a.name.localeCompare(b.name));
-  data.sort((a, b) => a.name.localeCompare(b.name));
-  data.sort((a, b) => a.category.localeCompare(b.category));
 
   console.log(categoryKor);
   console.log(categoryJapan);
   console.log('필터', data);
 
-  const jsonDateJapan = categoryJapan.map((item) => (
-    <div className='box' key={categoryJapan.length}>
+  const jsonDateJapan = categoryJapan.map((item, i) => (
+    <div className='box' key={i}>
       <div className='img_box'>
         {' '}
         <img className='img_in_box' src={item.picture} alt='사진' />
@@ -63,8 +56,8 @@ const Main = () => {
       </div>
     </div>
   ));
-  const jsonDateKor = categoryKor.map((item) => (
-    <div className='box' key={categoryKor.length}>
+  const jsonDateKor = categoryKor.map((item, i) => (
+    <div className='box' key={i}>
       <div className='img_box'>
         {' '}
         <img className='img_in_box' src={item.picture} alt='사진' />
@@ -87,16 +80,16 @@ const Main = () => {
       </div>
     </div>
   ));
-  console.log(data[0].category);
+
   return (
     <div className='all'>
       {loading === true ? (
         <h1>로딩중입니다</h1>
       ) : (
         <>
-          {/* <div className='categroy_title'>{data[1] && data[1].category}</div> */}
+          <div className='categroy_title'>일본</div>
           {jsonDateJapan}
-          {/* <div className='categroy_title'>{data[3].category}</div> */}
+          <div className='categroy_title'>한국</div>
           {jsonDateKor}
         </>
       )}
