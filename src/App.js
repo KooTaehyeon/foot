@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav.jsx';
 import Main from './components/Main.jsx';
+import Main_before from './components/Main_before.jsx';
 import Detail from './components/Detail.jsx';
 import React from 'react';
 
