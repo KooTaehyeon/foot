@@ -221,8 +221,8 @@ const Detail = () => {
 export default Detail;
 
 ```
-
-###  3번쨰 과제 Main 페이지 update
+### Main update
+##  3. 3번째 과제
 3번쨰 과제는 1번쨰 과제를 페이지를 개선 시키는 것으로 이해했습니다.
 
 일단 가져온 api 데이터를 먼저 필터를 사용해서 새로운 변수에 할당했습니다
