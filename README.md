@@ -4,7 +4,9 @@
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### App
 
-  import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+리엑트 라이브러리 인 react-router-dom 을 사용해서
+``` 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav.jsx';
 import Main from './components/Main.jsx';
 import Detail from './components/Detail.jsx';
@@ -26,5 +28,8 @@ function App() {
   );
 }
 
+
 export default App;
 
+
+```
