@@ -6,6 +6,7 @@
   background-color: #ffd400;
   width: 100vw;
   height: 80px;
+  overflow: hidden;
 }
 .nav_title {
   font-weight: bold;
