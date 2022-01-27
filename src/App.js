@@ -7,14 +7,11 @@ import React from 'react';
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <Nav></Nav>
+      <Nav />
       <Routes basename={process.env.PUBLIC_URL}>
-        <Route path={`/`} exact={true} element={<Main></Main>}></Route>
-        <Route
-          path={`/recipe/:id`}
-          exact={true}
-          element={<Detail></Detail>}
-        ></Route>
+        <Route path={`/`} exact={true} element={<Main />}></Route>
+        <Route path={`/be`} exact={true} element={<Main_before />}></Route>
+        <Route path={`/recipe/:id`} exact={true} element={<Detail />}></Route>
       </Routes>
     </Router>
   );

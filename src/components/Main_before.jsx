@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Main.css';
+import './Main_before.css';
 import imgA from './img/eye@2x.png';
 import imgB from './img/time_gray@2x.png';
 import { Link } from 'react-router-dom';
