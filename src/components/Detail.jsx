@@ -78,7 +78,7 @@ const Detail = () => {
                 {ids.cookingSteps &&
                   ids.cookingSteps.map((index, i) => (
                     <li>
-                      <div className='api_num'>{i}</div>
+                      <div className='api_num'>{i + 1}</div>
                       <span> {index}</span>
                     </li>
                   ))}

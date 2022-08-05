@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Routes basename={process.env.PUBLIC_URL}>
         <Route path={`/`} exact={true} element={<Main />}></Route>
-        <Route path={`/be`} exact={true} element={<Main_before />}></Route>
+        <Route path={`/be`} exact={true} element={<Main />}></Route>
         <Route path={`/recipe/:id`} exact={true} element={<Detail />}></Route>
       </Routes>
     </Router>
